@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.498131, g: 0.51634693, b: 0.5471698, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 987998737}
   - component: {fileID: 987998736}
   - component: {fileID: 987998738}
+  - component: {fileID: 987998739}
   m_Layer: 0
   m_Name: Akari
   m_TagString: Untagged
@@ -301,4 +302,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb82cdef69953dc46acd6d081f5c9941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+--- !u!114 &987998739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987998735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb82cdef69953dc46acd6d081f5c9941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
