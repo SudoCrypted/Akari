@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         transform = GetComponent<Transform>();
 
-        rigidbody.isKinematic = false;
+        rigidbody.isKinematic = true;
         rigidbody.angularDrag = 0.0f;
         rigidbody.gravityScale = 0.0f;
     }
