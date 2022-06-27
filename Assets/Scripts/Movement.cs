@@ -6,11 +6,14 @@ public class Movement : MonoBehaviour
 {
 
     new Rigidbody2D rigidbody;
-    public float speed = 1000.0f;
+    new Transform transform;
+
+    float speed = 4.0f;
 
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        transform = GetComponent<Transform>();
 
         rigidbody.isKinematic = false;
         rigidbody.angularDrag = 0.0f;
@@ -25,13 +28,12 @@ public class Movement : MonoBehaviour
 
     void Move(Vector2 targetVelocity)
     {
-        rigidbody.velocity = (targetVelocity * speed) * Time.deltaTime;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        Vector2 AxisControl = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Move(AxisControl);
+        Vector3 AxisControl = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        transform.position += AxisControl * speed * Time.deltaTime;
     }
 }
