@@ -26,10 +26,6 @@ public class Movement : MonoBehaviour
 
     }
 
-    void Move(Vector2 targetVelocity)
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
