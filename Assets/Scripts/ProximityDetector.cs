@@ -5,7 +5,6 @@ using UnityEngine;
 public class ProximityDetector : MonoBehaviour
 {
     public Transform TargetPlayer;
-    public float test = 10.0f;
 
     // Start is called before the first frame update
     public void Start()
