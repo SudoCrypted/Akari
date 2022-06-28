@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour
     public float FollowSpeed;
 
     // Update is called once per frame
-    void LateUpdate()
+    void FixedUpdate()
     {
         SmoothFollow();
     }
@@ -19,7 +19,7 @@ public class CameraFollow : MonoBehaviour
     void SmoothFollow()
     {
         Vector3 TargetPosition = target.position + offset;
-        Vector3 SmoothedFollow = Vector3.Lerp(transform.position, TargetPosition, FollowSpeed * Time.smoothDeltaTime);
+        Vector3 SmoothedFollow = Vector3.Lerp(transform.position, TargetPosition, FollowSpeed * Time.deltaTime);
         transform.position = SmoothedFollow;
     }
 }
