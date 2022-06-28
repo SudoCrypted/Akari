@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialogue : MonoBehaviour
+public class ProprietaryScript : MonoBehaviour
 {
+
+    
 
     ProximityDetector proximitydetector;
     [SerializeField] GameObject NPC;
@@ -18,13 +20,6 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (proximitydetector.inRange())
-        {
-            Debug.Log("In Range");
-        }
-        else
-        {
-            Debug.Log("Out of Range");
-        }
+
     }
 }
