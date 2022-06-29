@@ -9,11 +9,11 @@ public class BaseInstance : MonoBehaviour
     public ProximityDetector proximitydetector;
     public HealthManager health = new HealthManager();
 
-    public GameObject Target;
+    public GameObject Self_Base;
 
     void Awake()
     {
-        proximitydetector = GetComponent<ProximityDetector>();;
+        proximitydetector = GetComponent<ProximityDetector>();
     }
 
     // Start is called before the first frame update
@@ -32,6 +32,7 @@ public class BaseInstance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        combat.Target = Target;
+        if (proximitydetector.inRange())
+        combat.Target = Self_Base;
     }
 }

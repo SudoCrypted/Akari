@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour
 {
-
-    BaseInstance baseinstance;
+    public BaseInstance baseinstance;
     public GameObject Target;
 
     // Start is called before the first frame update
@@ -18,7 +17,6 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Target = baseinstance.Target;
         if (baseinstance.proximitydetector.inRange() && Input.GetButtonDown("Fire1"))
         {
             baseinstance.health.LoseHealth(10.0f);
