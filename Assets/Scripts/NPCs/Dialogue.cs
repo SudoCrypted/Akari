@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueManager : MonoBehaviour
+public class Dialogue : MonoBehaviour
 {
-
-    ProprietaryScript proprietaryscript;
     RectTransform recttransform;
     TextMeshPro textmeshpro;
     ProximityDetector proximitydetector;
@@ -16,7 +14,6 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        proprietaryscript = NPC.GetComponent<ProprietaryScript>(); // NPC info
         proximitydetector = NPC.GetComponent<ProximityDetector>(); // proximity info
         textmeshpro = GetComponent<TextMeshPro>(); // text access
         recttransform = GetComponent<RectTransform>(); // transform management
@@ -25,18 +22,15 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 NPC_Pos = proprietaryscript.transform.position; // transform management
+        Vector2 NPC_Pos = proximitydetector.transform.position; // transform management
         Vector2 Text_Pos = NPC_Pos + new Vector2(0.0f,1.2f); // transform management
 
         recttransform.anchoredPosition = Text_Pos; // attach text to NPC
 
-        if (proximitydetector.inRange()) // range detector
-        {
-            textmeshpro.text = "Hi.";
-        }
-        else // range detector
-        {
-            textmeshpro.text = " ";
-        }
+        if (proximitydetector.inRange())
+        textmeshpro.text = "in range!";
+
+        else
+        textmeshpro.text = "";
     }
 }

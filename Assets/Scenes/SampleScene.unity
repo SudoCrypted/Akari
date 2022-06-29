@@ -151,7 +151,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 334995484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553cafd61d8a3ad4592860f6d8382226, type: 3}
+  m_Script: {fileID: 11500000, guid: 14293dc5dacd6cc4ba50ce4a28a658b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NPC: {fileID: 1678021985}
@@ -553,7 +553,6 @@ GameObject:
   - component: {fileID: 1678021987}
   - component: {fileID: 1678021986}
   - component: {fileID: 1678021990}
-  - component: {fileID: 1678021991}
   - component: {fileID: 1678021989}
   - component: {fileID: 1678021988}
   m_Layer: 0
@@ -674,20 +673,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1678021985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f882401ba8537b4caa7b4361ac08d3a, type: 3}
+  m_Script: {fileID: 11500000, guid: cccc288c1f49b95499f8c355d7eac678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetPlayer: {fileID: 987998737}
---- !u!114 &1678021991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678021985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d71f79fd6d6778d45b8f9a7dfd9e42db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPC: {fileID: 1678021985}
