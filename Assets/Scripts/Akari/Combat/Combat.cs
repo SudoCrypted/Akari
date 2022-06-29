@@ -17,6 +17,7 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        baseinstance = Target.GetComponent<BaseInstance>();
         if (baseinstance.proximitydetector.inRange() && Input.GetButtonDown("Fire1"))
         {
             baseinstance.health.LoseHealth(10.0f);
