@@ -5,10 +5,11 @@ using UnityEngine;
 public class BaseInstance : MonoBehaviour
 {
 
-    public Character Base; 
+    public Character Base;
+    HealthManager health = new HealthManager();
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         Base = new Character();
         Base.Type = "Base";
@@ -16,7 +17,6 @@ public class BaseInstance : MonoBehaviour
         Base.Health = 100.0f;
         Base.rarity = 0.6f;
 
-        HealthManager health = new HealthManager();
         health.MaxHealth = Base.Health;
         health.CurrentHealth = Base.Health;
     }
@@ -24,5 +24,7 @@ public class BaseInstance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        health.GainHealth(10.0f);
+        health.LoseHealth(10.0f);
     }
 }

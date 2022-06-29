@@ -12,12 +12,25 @@ public class HealthManager
     public HealthManager() // constructor
     {
         Data = new Character();
-        Threshold = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
-
-        Debug.Log(Threshold);
     }
 
     public void GainHealth(float Amount)
     {
+        if (Input.GetKeyDown("g"))
+        {
+            CurrentHealth += Amount;
+            CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+            Debug.Log(CurrentHealth);
+        }
+    }
+
+    public void LoseHealth(float Amount)
+    {
+        if (Input.GetKeyDown("l"))
+        {
+            CurrentHealth -= Amount;
+            CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+            Debug.Log(CurrentHealth);
+        }
     }
 }
