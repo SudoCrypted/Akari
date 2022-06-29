@@ -8,6 +8,7 @@ public class HealthManager
     public float MaxHealth;
     public float CurrentHealth;
     float Threshold;
+    public bool isDead = false;
 
     public HealthManager() // constructor
     {
@@ -26,11 +27,18 @@ public class HealthManager
 
     public void LoseHealth(float Amount)
     {
-        if (Input.GetKeyDown("l"))
-        {
-            CurrentHealth -= Amount;
-            CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
-            Debug.Log(CurrentHealth);
-        }
+        CurrentHealth -= Amount;
+        CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+        Debug.Log(CurrentHealth);
+        
+
+        if (CurrentHealth <= 0)
+        DeathSequence();
+    }
+
+    public void DeathSequence()
+    {
+        isDead = true;
+        Debug.Log("Death:" + isDead);
     }
 }

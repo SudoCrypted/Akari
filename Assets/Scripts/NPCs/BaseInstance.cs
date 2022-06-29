@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class BaseInstance : MonoBehaviour
 {
-
     public Character Base;
-    HealthManager health = new HealthManager();
+    public ProximityDetector proximitydetector;
+    public HealthManager health = new HealthManager();
+
+    void Awake()
+    {
+        proximitydetector = GetComponent<ProximityDetector>();
+    }
 
     // Start is called before the first frame update
     public void Start()
@@ -24,7 +29,5 @@ public class BaseInstance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health.GainHealth(10.0f);
-        health.LoseHealth(10.0f);
     }
 }
