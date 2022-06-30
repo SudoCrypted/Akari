@@ -7,11 +7,6 @@ public class ProximityDetector : MonoBehaviour
     public Transform TargetPlayer;
     public float range;
 
-    // Start is called before the first frame update
-    public void Start()
-    {
-    }
-
     public bool inRange()
     {
         float x_difference = TargetPlayer.position.x - transform.position.x;
@@ -22,10 +17,5 @@ public class ProximityDetector : MonoBehaviour
 
         else
         return false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

@@ -10,17 +10,28 @@ public class Combat : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        baseinstance = Target.GetComponent<BaseInstance>();
+        
     }
 
+    void NullChecker()
+    {
+        if (Target == null)
+        return;
+
+        else
+        {
+            baseinstance = Target.GetComponent<BaseInstance>();
+            
+            if (baseinstance.proximitydetector.inRange() && Input.GetButtonDown("Fire1"))
+            {
+                baseinstance.health.LoseHealth(10.0f);
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
-        baseinstance = Target.GetComponent<BaseInstance>();
-        if (baseinstance.proximitydetector.inRange() && Input.GetButtonDown("Fire1"))
-        {
-            baseinstance.health.LoseHealth(10.0f);
-        }
+        NullChecker();
     }
 }

@@ -7,7 +7,6 @@ public class HealthManager
     public Character Data;
     public float MaxHealth;
     public float CurrentHealth;
-    float Threshold;
     public bool isDead = false;
 
     public HealthManager() // constructor

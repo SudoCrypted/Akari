@@ -34,5 +34,11 @@ public class BaseInstance : MonoBehaviour
     {
         if (proximitydetector.inRange())
         combat.Target = Self_Base;
+
+        if (health.isDead == true)
+        {
+            Destroy(gameObject);
+            combat.Target = null;
+        }
     }
 }
