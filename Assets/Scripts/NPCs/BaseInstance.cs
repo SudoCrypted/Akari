@@ -9,6 +9,11 @@ public class BaseInstance : MonoBehaviour
     public ProximityDetector proximitydetector;
     public HealthManager health = new HealthManager();
 
+    public string Type;
+    public string Biome;
+    public float Health;
+    public float rarity;
+
     public GameObject Self_Base;
 
     void Awake()
@@ -20,10 +25,10 @@ public class BaseInstance : MonoBehaviour
     public void Start()
     {
         Base = new Character();
-        Base.Type = "Base";
-        Base.Biome = "Winter";
-        Base.Health = 100.0f;
-        Base.rarity = 0.6f;
+        Base.Type = Type;
+        Base.Biome = Biome;
+        Base.Health = Health;
+        Base.rarity = rarity;
 
         health.MaxHealth = Base.Health;
         health.CurrentHealth = Base.Health;
